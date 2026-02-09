@@ -1,10 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Subsecond 3D Mesh Generation for Robot Manipulation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subsecond 3D Mesh Generation for Robot Manipulation</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Castoro&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Nerfies index.css overrides */
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .footer .icon-link {
+            font-size: 25px;
+            color: #000;
+        }
+        .link-block a {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .publication-title {
+            font-family: 'DM Sans', 'Noto Sans', sans-serif;
+        }
+        .publication-authors {
+            font-family: 'DM Sans', 'Noto Sans', sans-serif;
+        }
+        .publication-authors a {
+            color: hsl(204, 86%, 53%) !important;
+        }
+        .publication-authors a:hover {
+            text-decoration: underline;
+        }
+        .author-block {
+            display: inline-block;
+        }
+        .publication-affiliations {
+            font-family: 'DM Sans', 'Noto Sans', sans-serif;
+            font-size: 0.9rem;
+        }
+        .publication-notes {
+            font-family: 'DM Sans', 'Noto Sans', sans-serif;
+            font-size: 0.85rem;
+        }
+        .publication-video {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            border-radius: 10px !important;
+        }
+        .publication-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #BibTeX .title {
+            text-align: left;
+        }
+        #BibTeX pre {
+            background-color: #f5f5f5;
+            padding: 1.25rem;
+            overflow-x: auto;
+            border-radius: 6px;
+        }
+        #BibTeX code {
+            font-size: 0.9em;
+            background: transparent;
+            padding: 0;
+        }
+        .section .content-part {
+            margin-top: 6rem;
+        }
+        .section .content-part:first-child {
+            margin-top: 0;
+        }
+        .section {
+            padding-bottom: 4rem;
+        }
+        .hero {
+            padding-bottom: 2.5rem;
+        }
+        .publication-links {
+            margin-top: 1.5rem;
+        }
+        .figure-caption {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+        }
+        #BibTeX.section {
+            padding-top: 5rem;
+        }
+        .footer {
+            padding-top: 4rem;
+        }
+    </style>
 </head>
 <body>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">Subsecond 3D Mesh Generation for Robot Manipulation</h1>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><a href="https://pwang649.github.io/">Qian Wang</a>,</span>
+                        <span class="author-block">Omar Abdellall<sup>*</sup>,</span>
+                        <span class="author-block">Tony Gao<sup>*</sup>,</span>
+                        <span class="author-block"><a href="https://sunxiatao.me/">Xiatao Sun</a>,</span>
+                        <span class="author-block"><a href="https://dannyrakita.net/">Daniel Rakita,</a></span>
+                    </div>
+                    <div class="publication-affiliations">
+                        <span class="author-block">Yale University,</span>
+                    </div>
+                    <div class="publication-notes">
+                        <span class="author-block"><sup>*</sup>Equal contribution</span>
+                    </div>
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2512.24428" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+                            <span class="link-block">
+                <a href="https://arxiv.org/abs/2512.24428" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                            <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered content-part">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Overview</h2>
+                <figure class="image">
+                    <img src="overview.png" alt="Overview">
+                </figure>
+                <div class="content has-text-justified figure-caption">
+                    <p>
+                        <strong>Fig. 1:</strong> Our system for sub-second 3D mesh generation from RGB-D input. The system combines three stages: (1) Open-vocabulary segmentation using Florence-2 and SAM2 with depth enhancement via Depth Anything v2 (0.2s), (2) Accelerated mesh generation using FlashVDM-distilled Hunyuan3D 2.0 (0.5s), and (3) Object registration via RANSAC and ICP to align the mesh with observed point cloud (0.15s). The 0.85s total runtime marks a critical step toward real-time robotic applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered content-part">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    3D meshes are a fundamental representation widely used in computer science and engineering. In robotics, they are particularly valuable because they capture objects in a form that aligns directly with how robots interact with the physical world, enabling core capabilities such as predicting stable grasps, detecting collisions, and simulating dynamics. Although automatic 3D mesh generation methods have shown promising progress in recent years, potentially offering a path toward real-time robot perception, two critical challenges remain. First, generating high-fidelity meshes is prohibitively slow for real-time use, often requiring tens of seconds per object. Second, mesh generation by itself is insufficient. In robotics, a mesh must be <em>contextually grounded</em>, i.e., correctly <em>segmented</em> from the scene and <em>registered</em> with the proper scale and pose. Additionally, unless these contextual grounding steps remain efficient, they simply introduce new bottlenecks. In this work, we introduce an end-to-end system that addresses these challenges, producing a high-quality, contextually grounded 3D mesh from a single RGB-D image in under one second. Our pipeline integrates open-vocabulary object segmentation, accelerated diffusion-based mesh generation, and robust point cloud registration, each optimized for both speed and accuracy. We demonstrate its effectiveness in a real-world manipulation task, showing that it enables meshes to be used as a practical, on-demand representation for robotics perception and planning.
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered content-part">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Video</h2>
+                <div class="publication-video">
+                    <iframe src="https://www.youtube.com/embed/AkFoI_kyQhc?si=hIYjF-bfuglstXlq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered content-part">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Qualitative Results</h2>
+                <figure class="image">
+                    <img src="qualitative.png" alt="Qualitative Results">
+                </figure>
+                <div class="content has-text-justified figure-caption">
+                    <p>
+                        <strong>Fig. 2:</strong> Qualitative Comparison of Generated Meshes and Registration Results. Our method (left) achieves high geometric quality nearly identical to the slow H3D baseline (middle), while the fast SF3D baseline (right) produces significant artifacts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{wang2025subsecond,
+  title={Subsecond 3D Mesh Generation for Robot Manipulation},
+  author={Wang, Qian and Abdellall, Omar and Gao, Tony and Sun, Xiatao and Rakita, Daniel},
+  journal={arXiv preprint arXiv:2512.24428},
+  year={2025}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content has-text-centered">
+                    <p>
+                        This website template is adapted from the
+                        <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies project page</a>
+                        and is licensed under a
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
